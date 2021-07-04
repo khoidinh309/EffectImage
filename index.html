@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Card with UI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+</head>
+<body>
+	<div class = "Box">
+		<div class = "imgBx">
+			<img src="IMG_7673.jpg" alt="IMG-7673" border="0">
+		</div>
+		<div class = "content">
+			<h2>TỐT NGHIỆP<br><span>2020</span></h2>
+		</div>
+	</div><div class = "Box">
+		<div class = "imgBx">
+			<img src="DAI_0434.jpg" alt="DAI-0434" border="0">
+		</div>
+		<div class = "content">
+			<h2>THẦY DẠY HÓA TÀI BA<br><span>2020</span></h2>
+		</div>
+	</div>
+	<div class = "Box">
+		<div class = "imgBx">
+			<img src="DAI_1012.jpg" alt="DAI-1012" border="0">
+		</div>
+		<div class = "content">
+			<h2>HỌC BỔNG FPT<br><span>Tối nay ăn gì?</span></h2>
+		</div>
+	</div>
+	<div class = "Box">
+		<div class = "imgBx">
+			<img src="DAI_0833.jpg" alt="DAI-0833" border="0">
+		</div>
+		<div class = "content">
+			<h2>CÙNG BÀN<br><span>Chủ nhân chìa khóa kho bạc</span></h2>
+		</div>
+	</div><div class = "Box">
+		<div class = "imgBx">
+			<img src="DAI_1371.jpg" alt="DAI-1371" border="0">
+		</div>
+		<div class = "content">
+			<h2>ĐỒI THÔNG<br><span></span></h2>
+		</div>
+	</div>
+	<div class = "Box">
+		<div class = "imgBx">
+			<img src="IMG_9006.jpg" alt="IMG-9006-1" border="0">
+		</div>
+		<div class = "content">
+			<h2>COOL!<br><span>Không cần cố</span></h2>
+		</div>
+	</div>
+</body>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	background: #010615;
+}
+
+.Box {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 40px;
+	background: #060c21;
+	transition: 0.5s;
+}
+
+.Box:hover {
+	height: 400px;
+}
+
+.Box .imgBx {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.Box .imgBx img {
+	max-width: 100%;
+	opacity: 0.1;
+	transition: 0.5s;
+}
+
+.Box:hover .imgBx img {
+	opacity: 1;
+}
+
+.Box:before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	z-index: -1;
+}
+
+.Box:after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	z-index: -2;
+	filter: blur(40px);
+}
+
+.Box:before,
+.Box:after {
+	background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.Box:nth-child(2):before,
+.Box:nth-child(2):after {
+	background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+.Box:nth-child(3):before,
+.Box:nth-child(3):after {
+	background: linear-gradient(235deg, #772aff, #010615, #2196F3);
+}
+
+.Box .content {
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	height: 90px;
+	background: rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.Box:hover .content {
+	opacity: 1;
+}
+
+.Box .content h2 span {
+	font-size: 14px;
+	color: #fff;
+	font-weight: 200;
+	letter-spacing: 2px;
+}
+</style>
+</html>
